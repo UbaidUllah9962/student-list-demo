@@ -58,7 +58,7 @@ function StudentList() {
             type="email"
             placeholder="Enter email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value.toLowerCase())}
           />
         </Form.Group>
 
@@ -70,8 +70,11 @@ function StudentList() {
       <ListGroup>
         {students.map((student, index) => (
           <ListGroup.Item className="list-item" key={index}>
-            [Name: {student.name}], [Age: {student.age}], [Email:{" "}
-            {student.email}]
+            <div className="list">
+              <div className="list-text"> Name: {student.name} </div>
+              <div className="list-text"> Age: {student.age} </div>
+              <div className="list-text"> Email: {student.email} </div>
+            </div>
             <Button
               className="remove-button"
               onClick={() => removeStudent(index)}

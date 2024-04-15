@@ -59,15 +59,25 @@ button {
 }
 
 .list-item {
+  background-color: hsla(0, 0%, 0%, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 400px;
-  padding: 20px;
+  padding: 10px;
   margin-top: 10px;
-  border: 1px solid #ced4da;
+  border: 1px solid hsla(0, 0%, 0%, 0.37);
   border-radius: 5px;
-  font-weight: bold;
+  font-size: 18px;
+  flex-direction: column;
+}
+
+.list {
+  background-color: hsla(208, 7%, 46%, 0.5);
+  border: 2px solid hsla(0, 0%, 0%, 0.205);
+  padding: 10px;
+  width: 350px;
+  text-align: center;
 }
 
 list-group-item button {
