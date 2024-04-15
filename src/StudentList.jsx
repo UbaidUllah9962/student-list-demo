@@ -62,17 +62,18 @@ function StudentList() {
           />
         </Form.Group>
 
-        <Button variant="primary" onClick={addStudent}>
+        <Button className="button-add" onClick={addStudent}>
           Add Student
         </Button>
       </Form>
 
       <ListGroup>
         {students.map((student, index) => (
-          <ListGroup.Item key={index}>
-            Name: {student.name}, Age: {student.age}, Email: {student.email}
+          <ListGroup.Item className="list-item" key={index}>
+            [Name: {student.name}], [Age: {student.age}], [Email:{" "}
+            {student.email}]
             <Button
-              variant="danger"
+              className="remove-button"
               onClick={() => removeStudent(index)}
               style={{ float: "right" }}
             >
